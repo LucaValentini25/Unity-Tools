@@ -3,14 +3,16 @@ using UnityEditor;
 
 public class RenameItems : EditorWindow
 {
-    private string baseName = "Item"; // Valor predeterminado
-    private bool useCustomBaseName = false; // Bool para decidir si el baseName es custom o no
-    private bool enumerate = false;
-    private EnumerationFormat format = EnumerationFormat.Item1;
-    public GameObject[] objectsToRename; // Hacemos que sea público para que aparezca en el Editor
-    private string previewName = ""; // Para mostrar el formato según el enum seleccionado
+    private string _baseName = "Item";
+    private bool _useCustomBaseName = false; 
+    private bool _enumerate = false;
+    private EnumerationFormat _format = EnumerationFormat.Item1;
+    public GameObject[] objectsToRename; 
+    private string _previewName = ""; 
 
-    // Enum para definir los formatos de enumeración
+    private Vector2 _scrollPos;
+
+    // Enum to define enumeration formats
     public enum EnumerationFormat
     {
         Item1,            // Item 1
@@ -21,76 +23,96 @@ public class RenameItems : EditorWindow
     [MenuItem("Tools/Rename Items")]
     public static void ShowWindow()
     {
-        GetWindow<RenameItems>("Rename Items");
+        RenameItems window = GetWindow<RenameItems>("Rename Items");
+        window.minSize = new Vector2(300, 400); // Minimum size
     }
 
     private void OnGUI()
     {
-        // Mostrar el array de objetos para que el usuario pueda asignarlos manualmente
+        // Scroll view for the content
+        _scrollPos = EditorGUILayout.BeginScrollView(_scrollPos);
+
+        // Display the array of objects for manual assignment
         SerializedObject serializedObject = new SerializedObject(this);
         SerializedProperty objectsProp = serializedObject.FindProperty("objectsToRename");
 
-        // Desplegable para seleccionar los objetos
+        // Dropdown to select objects
         EditorGUILayout.PropertyField(objectsProp, new GUIContent("Objects to Rename"), true);
         serializedObject.ApplyModifiedProperties();
 
-        // Bool para decidir si el Base Name es custom o no, se coloca primero
-        useCustomBaseName = EditorGUILayout.Toggle("Use Custom Base Name", useCustomBaseName);
+        EditorGUILayout.BeginHorizontal();
+        // Button to add selected objects from the hierarchy to the array
+        if (GUILayout.Button("Add Selected Objects"))
+        {
+            AddSelectedObjects();
+        }
 
-        // Actualizar baseName solo si no es custom y hay un primer objeto
+        // Button to clear the array
+        if (GUILayout.Button("Clear Objects"))
+        {
+            ClearObjects();
+        }
+        EditorGUILayout.EndHorizontal();
+
+        // Bool to decide if the Base Name is custom or not
+        _useCustomBaseName = EditorGUILayout.Toggle("Use Custom Base Name", _useCustomBaseName);
+
+        // Update baseName only if it is not custom and there is a first object
         if (objectsToRename != null && objectsToRename.Length > 0 && 
-            !string.IsNullOrEmpty(objectsToRename[0]?.name) && !useCustomBaseName)
+            !string.IsNullOrEmpty(objectsToRename[0]?.name) && !_useCustomBaseName)
         {
-            baseName = objectsToRename[0].name;
+            _baseName = objectsToRename[0].name;
         }
 
-        // Mostrar el Base Name como readonly si no es custom
-        EditorGUI.BeginDisabledGroup(!useCustomBaseName); // Deshabilita el campo si no es custom
-        baseName = EditorGUILayout.TextField("Base Name", baseName);
+        // Display the Base Name as readonly if it is not custom
+        EditorGUI.BeginDisabledGroup(!_useCustomBaseName); // Disables the field if not custom
+        _baseName = EditorGUILayout.TextField("Base Name", _baseName);
         EditorGUI.EndDisabledGroup();
 
-        // Checkbox para enumerar los objetos
-        enumerate = EditorGUILayout.Toggle("Enumerate", enumerate);
+        // Checkbox to enumerate objects
+        _enumerate = EditorGUILayout.Toggle("Enumerate", _enumerate);
 
-        // Si se quiere enumerar, mostrar las opciones de formato
-        if (enumerate)
+        // If enumeration is enabled, display format options
+        if (_enumerate)
         {
-            format = (EnumerationFormat)EditorGUILayout.EnumPopup("Format", format);
+            _format = (EnumerationFormat)EditorGUILayout.EnumPopup("Format", _format);
 
-        // Actualizar el preview del nombre basado en el formato seleccionado
-        UpdatePreviewName();
+            // Update the preview name based on the selected format
+            UpdatePreviewName();
 
-        // Mostrar el campo readonly con el nombre previsualizado
-        EditorGUI.BeginDisabledGroup(true);
-        EditorGUILayout.TextField("Preview", previewName);
-        EditorGUI.EndDisabledGroup();
+            // Display a readonly field with the previewed name
+            EditorGUI.BeginDisabledGroup(true);
+            EditorGUILayout.TextField("Preview", _previewName);
+            EditorGUI.EndDisabledGroup();
         }
 
-        // Botón para ejecutar el renombrado
+        // Button to execute renaming
         if (GUILayout.Button("Rename Objects"))
         {
             RenameSelectedObjects();
         }
+
+        EditorGUILayout.EndScrollView(); // End of scroll view
     }
 
-    // Método para actualizar la vista previa del nombre basado en el formato seleccionado
+    // Method to update the preview name based on the selected format
     private void UpdatePreviewName()
     {
-        previewName = baseName; // Inicia con el baseName
+        _previewName = _baseName; // Start with the baseName
 
-        if (enumerate)
+        if (_enumerate)
         {
-            // Simular el nombre del primer objeto enumerado (1)
-            switch (format)
+            // Simulate the name of the first enumerated object (1)
+            switch (_format)
             {
                 case EnumerationFormat.Item1:
-                    previewName += " 1";
+                    _previewName += " 1";
                     break;
                 case EnumerationFormat.Item_1:
-                    previewName += "_1";
+                    _previewName += "_1";
                     break;
                 case EnumerationFormat.ItemParentheses1:
-                    previewName += " (1)";
+                    _previewName += " (1)";
                     break;
             }
         }
@@ -106,13 +128,13 @@ public class RenameItems : EditorWindow
 
         for (int i = 0; i < objectsToRename.Length; i++)
         {
-            if (objectsToRename[i] != null) // Asegurarse de que el objeto no sea null
+            if (objectsToRename[i] != null) // Ensure the object is not null
             {
-                string newName = baseName;
+                string newName = _baseName;
 
-                if (enumerate)
+                if (_enumerate)
                 {
-                    switch (format)
+                    switch (_format)
                     {
                         case EnumerationFormat.Item1:
                             newName += " " + (i + 1);
@@ -131,5 +153,17 @@ public class RenameItems : EditorWindow
         }
 
         Debug.Log("Objects renamed successfully.");
+    }
+    
+    private void ClearObjects()
+    {
+        objectsToRename = new GameObject[0];
+        Debug.Log("Array cleared.");
+    }
+    
+    private void AddSelectedObjects()
+    {
+        objectsToRename = Selection.gameObjects;
+        Debug.Log($"{objectsToRename.Length} objects added to the array.");
     }
 }
