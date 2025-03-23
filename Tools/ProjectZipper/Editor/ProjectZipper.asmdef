@@ -1,6 +1,6 @@
 {
-	"name": "UnityTools.ProjectZipper.Editor",
-	"references": [],
-	"includePlatforms": ["Editor"],
-	"autoReferenced": true
+  "name": "com.clastertools.projectzipper.editor",
+  "references": [],
+  "includePlatforms": [ "Editor" ],
+  "autoReferenced": true
 }
