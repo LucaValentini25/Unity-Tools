@@ -1,0 +1,6 @@
+{
+	"name": "UnityTools.ProjectZipper.Editor",
+	"references": [],
+	"includePlatforms": ["Editor"],
+	"autoReferenced": true
+}
