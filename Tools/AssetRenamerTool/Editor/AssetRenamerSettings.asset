@@ -1,0 +1,78 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: AssetRenamerSettings
+  m_EditorClassIdentifier: Assembly-CSharp-Editor:com.ClasterTools.AssetRenamer.Editor:AssetRenamerSettings
+  prefixEntries:
+  - categoryName: Animation
+    extension: .anim
+    prefix: Anim
+  - categoryName: Animator Controller
+    extension: .controller
+    prefix: AnimCon
+  - categoryName: Audio
+    extension: .wav
+    prefix: Sound
+  - categoryName: Audio
+    extension: .mp3
+    prefix: Sound
+  - categoryName: Audio
+    extension: .ogg
+    prefix: Sound
+  - categoryName: Material
+    extension: .mat
+    prefix: Mat
+  - categoryName: Mesh
+    extension: .fbx
+    prefix: Mesh
+  - categoryName: Mesh
+    extension: .obj
+    prefix: Mesh
+  - categoryName: Prefab
+    extension: .prefab
+    prefix: Prefab
+  - categoryName: Shader
+    extension: .shader
+    prefix: Shad
+  - categoryName: Shader Graph
+    extension: .shadergraph
+    prefix: SH_Graph
+  - categoryName: Texture
+    extension: .png
+    prefix: Tex
+  - categoryName: Texture
+    extension: .jpg
+    prefix: Tex
+  - categoryName: Texture
+    extension: .jpeg
+    prefix: Tex
+  - categoryName: Texture
+    extension: .tga
+    prefix: Tex
+  - categoryName: Texture
+    extension: .psd
+    prefix: Tex
+  - categoryName: ScriptableObject
+    extension: .asset
+    prefix: SO
+  - categoryName: Timeline
+    extension: .playable
+    prefix: Timeline
+  - categoryName: Sprite Atlas
+    extension: .spriteatlas
+    prefix: Sprite_Atl
+  - categoryName: Lighting Settings
+    extension: .lighting
+    prefix: Light
+  - categoryName: Render Texture
+    extension: .renderTexture
+    prefix: Rend_Tex
