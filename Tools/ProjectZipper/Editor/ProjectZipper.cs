@@ -5,7 +5,7 @@ using UnityEditor;
 using UnityEngine;
 using CompressionLevel = System.IO.Compression.CompressionLevel;
 
-namespace UnityTools.ProjectZipper
+namespace com.ClasterTools..ProjectZipper.Editor
 {
     public static class ProjectZipper
     {
