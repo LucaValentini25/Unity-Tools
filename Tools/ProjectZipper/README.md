@@ -15,6 +15,9 @@
 2. Select the location and name of the `.zip` file.
 3. Done! The project is saved as a backup.
 
+![image](https://github.com/user-attachments/assets/e7845fcb-7bb2-4205-af98-4c2d46c1415d)
+
+
 ## ⚠️ Limitations
 
 - Does not include folders like `Library`, `Logs`, etc.
