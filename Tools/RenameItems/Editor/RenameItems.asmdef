@@ -1,0 +1,6 @@
+{
+  "name": "com.clastertools.renameitems.editor",
+  "references": [],
+  "includePlatforms": [ "Editor" ],
+  "autoReferenced": true
+}

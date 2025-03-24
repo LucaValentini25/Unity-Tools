@@ -1,0 +1,13 @@
+{
+  "name": "com.clastertools.renameitems",
+  "displayName": "Rename Items",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "description": "A Unity Editor tool for renaming multiple GameObjects at once, with custom base name, enumeration formats, and configurable starting index.",
+  "keywords": [ "rename", "editor", "tools", "utility", "batch" ],
+  "author": {
+    "name": "Claster Tools",
+    "url": "https://github.com/LucaValentini25"
+  },
+  "documentation": "https://github.com/LucaValentini25/Unity-Tools/tree/main/Tools/RenameItems"
+}
