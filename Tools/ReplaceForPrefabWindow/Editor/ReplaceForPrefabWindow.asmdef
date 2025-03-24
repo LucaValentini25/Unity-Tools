@@ -1,0 +1,6 @@
+{
+  "name": "com.clastertools.prefabreplacer.editor",
+  "references": [],
+  "includePlatforms": [ "Editor" ],
+  "autoReferenced": true
+}
