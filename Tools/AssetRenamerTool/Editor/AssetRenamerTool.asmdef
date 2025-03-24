@@ -1,0 +1,6 @@
+{
+  "name": "com.clastertools.assetrenamer.editor",
+  "references": [],
+  "includePlatforms": [ "Editor" ],
+  "autoReferenced": true
+}
