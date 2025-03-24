@@ -20,12 +20,9 @@ It supports enumeration formats, base name customization, and custom starting in
 2. Add selected objects or manually assign
 3. Choose base name, format, and starting index
 4. Click **Rename Objects**
+   
+![image](https://github.com/user-attachments/assets/07832423-cba7-48af-98ba-77734424b862)
 
-## 📦 Install via Package Manager
-
-```bash
-https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/RenameItems
-```
 ## 🧾 Requirements
 - Unity 2021.3 or higher
 - Editor only
