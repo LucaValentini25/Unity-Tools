@@ -25,3 +25,6 @@ It supports drag & drop, previewing names, undo, and persistent settings stored 
 3. Customize names and prefixes
 4. Apply to all or filtered items
 5. Use the Undo button if needed
+
+![image](https://github.com/user-attachments/assets/13fccc96-48f5-483b-9c7c-2089d0ff4526)
+![image](https://github.com/user-attachments/assets/fe13f2cc-3168-4109-9a10-d174c64cca84)
