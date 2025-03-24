@@ -11,12 +11,23 @@
 - Disable or destroy the original objects
 - Organized UI with collapsible sections
 
+## 📦 How to Install
+You can install this tool via Unity's Package Manager using a Git URL:
+1. Open Unity
+2. Go to `Window > Package Manager`
+3. Click the `+` button → *Add package from Git URL...*
+4. Paste the link and click `Add`
+```bash
+https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/PrefabReplacer
+```
+
 ## ✅ How to Use
 
 1. Go to `Tools > Replace For Prefab`.
 2. Assign a prefab and the objects to replace.
 3. Customize settings (transform, naming, components, handling).
 4. Click **Replace** to apply the operation.
+
 ![image](https://github.com/user-attachments/assets/dae2d50a-4966-4ff1-8d94-85f683f8d412)
 
 ## ⚠️ Limitations
@@ -29,3 +40,5 @@
 
 - Unity 2021.3 or higher
 - Editor only
+
+
