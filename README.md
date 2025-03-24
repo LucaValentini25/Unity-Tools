@@ -50,7 +50,17 @@ Rename multiple GameObjects in the hierarchy with custom base names, optional en
 ```bash
 https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/RenameItems
 ```
+### 🔹 [Asset Renamer](Tools/AssetRenamerTool/README.md)
 
+Batch rename assets in your project using customizable prefix rules based on file extensions. Includes filters, live previews, undo support, and ScriptableObject-based settings.
+
+- 📁 Path: `Tools/AssetRenamerTool`
+- 📖 [Read the Documentation](Tools/AssetRenamerTool/README.md)
+- 📥 Install via Package Manager:
+
+```bash
+https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/AssetRenamerTool
+```
 ## 📚 License
 
 Each tool may include its own `LICENSE` file.  
