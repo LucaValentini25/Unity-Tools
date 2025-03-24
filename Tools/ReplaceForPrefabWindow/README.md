@@ -17,6 +17,7 @@
 2. Assign a prefab and the objects to replace.
 3. Customize settings (transform, naming, components, handling).
 4. Click **Replace** to apply the operation.
+![image](https://github.com/user-attachments/assets/dae2d50a-4966-4ff1-8d94-85f683f8d412)
 
 ## ⚠️ Limitations
 
