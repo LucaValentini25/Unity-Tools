@@ -39,6 +39,17 @@ Replace selected GameObjects in the scene with a prefab, preserving transform, n
 ```bash
 https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/PrefabReplacer
 ```
+### 🔹 [Rename Items](Tools/RenameItems/README.md)
+
+Rename multiple GameObjects in the hierarchy with custom base names, optional enumeration formats, and configurable starting index.
+
+- 📁 Path: `Tools/RenameItems`
+- 📖 [Read the Documentation](Tools/RenameItems/README.md)
+- 📥 Install via Package Manager:
+
+```bash
+https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/RenameItems
+```
 
 ## 📚 License
 
