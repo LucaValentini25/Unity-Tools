@@ -6,7 +6,7 @@
   "description": "A Unity Editor tool to replace selected objects in the scene with a prefab, copying transform, name, and optionally components.",
   "keywords": [ "prefab", "replace", "tools", "editor", "scene" ],
   "author": {
-    "name": "Unity Tools",
+    "name": "Claster Tools",
     "url": "https://github.com/LucaValentini25"
   },
   "documentation": "https://github.com/LucaValentini25/Unity-Tools/tree/main/Tools/ReplaceForPrefabWindow"

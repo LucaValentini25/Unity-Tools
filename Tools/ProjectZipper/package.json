@@ -6,7 +6,7 @@
   "description": "A Unity editor tool to export project folders (Assets, ProjectSettings, Packages) as a zip backup.",
   "keywords": [ "backup", "zip", "editor", "tools", "export" ],
   "author": {
-    "name": "Unity Tools",
+    "name": "Claster Tools",
     "url": "https://github.com/LucaValentini25"
   },
   "documentation": "https://github.com/LucaValentini25/Unity-Tools/tree/main/Tools/ProjectZipper"
