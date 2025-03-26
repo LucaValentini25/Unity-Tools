@@ -37,7 +37,7 @@ Replace selected GameObjects in the scene with a prefab, preserving transform, n
 - 📥 Install via Package Manager:
 
 ```bash
-https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/PrefabReplacer
+https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/ReplaceForPrefabWindow
 ```
 ### 🔹 [Rename Items](Tools/RenameItems/README.md)
 
