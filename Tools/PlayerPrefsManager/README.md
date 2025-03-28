@@ -35,6 +35,10 @@ https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/PlayerPrefsManager
 3. Use the `Add New` tab to create new PlayerPrefs
 4. Click **Apply New Prefs** to commit added entries
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c6437ef9-4f03-4580-bf73-d9ef83ad3b69" width="45%">
+  <img src="https://github.com/user-attachments/assets/cb431169-a361-44ed-a283-ebd9174c6e5f" width="45%">
+</p>
 ---
 
 ## 🧾 Requirements
