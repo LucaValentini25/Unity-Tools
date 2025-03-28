@@ -1,0 +1,6 @@
+{
+  "name": "com.clastertools.playerprefsmanager",
+  "references": [],
+  "includePlatforms": [ "Editor" ],
+  "autoReferenced": true
+}
