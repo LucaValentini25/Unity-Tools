@@ -1,0 +1,13 @@
+{
+  "name": "com.clastertools.playerprefsmanager",
+  "displayName": "PlayerPrefs Manager",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "description": "A Unity Editor tool to view, edit, add and manage PlayerPrefs directly from the editor using the Windows Registry.",
+  "keywords": [ "playerprefs", "registry", "editor", "tools", "windows" ],
+  "author": {
+    "name": "Claster Tools",
+    "url": "https://github.com/LucaValentini25"
+  },
+  "documentation": "https://github.com/LucaValentini25/Unity-Tools/tree/main/Tools/AssetRenamer"
+}
