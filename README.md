@@ -37,7 +37,7 @@ Replace selected GameObjects in the scene with a prefab, preserving transform, n
 - 📥 Install via Package Manager:
 
 ```bash
-https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/PrefabReplacer
+https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/ReplaceForPrefabWindow
 ```
 ### 🔹 [Rename Items](Tools/RenameItems/README.md)
 
@@ -50,18 +50,16 @@ Rename multiple GameObjects in the hierarchy with custom base names, optional en
 ```bash
 https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/RenameItems
 ```
-### 🔹 [PlayerPrefs Manager](Tools/PlayerPrefsManager/README.md)
+### 🔹 [Asset Renamer](Tools/AssetRenamerTool/README.md)
 
-View, edit, delete, and create PlayerPrefs directly from the **Windows Registry**. Includes locking, clipboard copy, value editing, and filtering.  
+Batch rename assets in your project using customizable prefix rules based on file extensions. Includes filters, live previews, undo support, and ScriptableObject-based settings.
 
-> ⚠️ This tool interacts with the Windows Registry — **read the documentation before using**.
-
-- 📁 Path: `Tools/PlayerPrefsManager`
-- 📖 [Read the Documentation](Tools/PlayerPrefsManager/README.md)
+- 📁 Path: `Tools/AssetRenamerTool`
+- 📖 [Read the Documentation](Tools/AssetRenamerTool/README.md)
 - 📥 Install via Package Manager:
 
 ```bash
-https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/PlayerPrefsManager
+https://github.com/LucaValentini25/Unity-Tools.git?path=Tools/AssetRenamerTool
 ```
 ## 📚 License
 
