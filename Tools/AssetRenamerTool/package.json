@@ -1,7 +1,7 @@
 {
   "name": "com.clastertools.assetrenamer",
   "displayName": "Asset Renamer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "unity": "2021.3",
   "description": "A Unity Editor tool to rename assets in bulk using configurable prefixes, filters and live preview. Includes ScriptableObject-based settings.",
   "keywords": [ "rename", "assets", "editor", "tool", "prefix", "batch" ],
