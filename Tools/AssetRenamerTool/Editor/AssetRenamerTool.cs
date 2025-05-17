@@ -40,13 +40,24 @@ namespace com.ClasterTools.AssetRenamer.Editor
 
             if (settings == null)
             {
-                string[] guids = AssetDatabase.FindAssets("t:AssetRenamerSettings");
-                if (guids.Length > 0)
+                // Intentar buscar uno existente en la carpeta por defecto
+                string defaultPath = "Assets/Editor/AssetRenamerSettings/AssetRenamerSettings.asset";
+                settings = AssetDatabase.LoadAssetAtPath<AssetRenamerSettings>(defaultPath);
+
+                // Si no existe, crear uno nuevo
+                if (settings == null)
                 {
-                    string path = AssetDatabase.GUIDToAssetPath(guids[0]);
-                    settings = AssetDatabase.LoadAssetAtPath<AssetRenamerSettings>(path);
-                    EditorPrefs.SetString(SettingsPrefsKey, path);
+                    if (!AssetDatabase.IsValidFolder("Assets/Editor"))
+                        AssetDatabase.CreateFolder("Assets", "Editor");
+                    if (!AssetDatabase.IsValidFolder("Assets/Editor/AssetRenamerSettings"))
+                        AssetDatabase.CreateFolder("Assets/Editor", "AssetRenamerSettings");
+
+                    settings = ScriptableObject.CreateInstance<AssetRenamerSettings>();
+                    AssetDatabase.CreateAsset(settings, defaultPath);
+                    AssetDatabase.SaveAssets();
                 }
+
+                EditorPrefs.SetString(SettingsPrefsKey, defaultPath);
             }
         }
 
