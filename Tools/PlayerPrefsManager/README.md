@@ -2,7 +2,6 @@
 
 **PlayerPrefs Manager** is a Unity Editor tool that allows you to **view**, **edit**, **delete**, and **add** PlayerPrefs directly from the Windows Registry. It includes locking support to prevent accidental deletion and visual organization for easy inspection.
 
-> ⚠️ Windows-only. Requires Unity Editor running on Windows.
 
 ## ⚠️ Disclaimer
 
